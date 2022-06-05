@@ -26,7 +26,7 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser(async (id, done) => {
   try {
     const user = await User.findByPk(id)
-    done(null, user)
+    done(null, user.toJSON())
   } catch (error) {
     done(error, false)
   }
