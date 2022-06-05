@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="description" content="ShopNow">
+		<meta name="keywords" content="HTML,CSS,JavaScript">
+		<meta name="author" content="AppifyLab">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ShopNow</title>
+        <link rel="icon" href="assets/images/tab-logo-1.png" type="image/png" sizes="16x16" >
+
+        <!--===============
+			CSS FILES
+		=================-->
+		
+		<!-- Bootstrap CSS-->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all" />
+
+		<!-- Owl Carousel CSS -->
+		<link href="assets/css/owl.carousel.min.css" rel="stylesheet" >
+        <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" >
+        
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+        
+    </head>
+
+    <body>
+
+        <!-- Preloader -->
+		<div class="preloader">
+            <div class="preloader-wrapper">
+                <div class="ball-triangle">
+                    <img src="assets/fonts/ball-triangle.svg" width="60" alt="preloader">
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+
+        <!--=============
+            Navbar
+        =================-->
+
+        <nav>
+            <div class="container">
+                <div class="nav-inner">
+                    <div class="nav-brand">
+                        <div class="nav-category-menu">
+                            <span><i class="fas fa-bars"></i></span>
+                        </div>
+                        <a href="index.html"><img src="assets/images/logo-header.png" alt="appifylab"></a>
+                    </div>
+                    <div class="nav-search-bar">
+                        <form action="#">
+                            <div class="nav-search-locat">
+                                <div class="nav-search-locat-inner" id="location-delivery">
+                                    <span><i class="fas fa-map-marker-alt"></i></span>
+                                </div>
+                            </div>
+                            <div class="nav-search-input">
+                                <div class="nav-search-input-inner">
+                                    <input type="text" placeholder="Search for products">
+                                </div>
+                            </div>
+                            <div class="nav-search-icon">
+                                <div class="nav-search-icon-inner">
+                                    <button onclick="window.location.href='search-page.html'"><span><i class="fas fa-search"></i></span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="nav-navigation">
+                        <ul>
+                            <li class="nav-navigation-list">
+                                <a href="#">English</a>
+                            </li>
+                            <li class="nav-navigation-list click-prof navi-move">
+                                <a href="#"><img src="assets/images/dgMan.svg" alt=""></a><span></span>
+                                <ul class="prop-dropdown">
+                                    <li><a href="profile.html">Hi pranto protim roy</a></li>
+                                    <li><a href="profile.html">Your profile</a></li>
+                                    <li><a href="order.html">Your orders</a></li>
+                                    <li class="active"><a href="#">Your addresses</a></li>
+                                    <li><a href="sale-service.html">After sales services</a></li>
+                                    <li><a href="index.html">Sign out</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-navigation-list cart-list">
+                                <a href="#"><span><i class="fas fa-shopping-cart"></i></span><p class="cart-show">10</p></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-bottom-list">
+
+                </div>
+            </div>
+        </nav>
+        <!-- end navbar-->
+
+        <!--=============
+            section content
+        =================-->
+
+        <div class="main-section-abs"></div>
+
+        <section class="main-section mt-67">
+            <div class="container">
+                <div class="section-details">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2 mt-10 move-sec mob-hide">
+                            <div class="category-section box-shadow">
+                                <div class="mobile-box res-box">
+                                    <ul>
+                                        <li data-res="1">Category</li>
+                                    </ul>
+                                </div>
+                                <div class="category-section-f category-section-f-1" data-res-details="1">
+                                    <div class="category-section-title res-box">
+                                        <h2>All categories</h2>
+                                    </div>
+                                    <div class="category-section-item">
+                                        <ul>
+                                            <li><a href="category-page.html">Men fashion <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Jackets & hoodies</a></li>
+                                                    <li><a href="category-sub-page.html">Shirts <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Formal</a></li>
+                                                            <li><a href="category-sub-page.html">Casual</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Tees & polos</a></li>
+                                                    <li><a href="category-sub-page.html">Panjabi</a></li>
+                                                    <li><a href="category-sub-page.html">Pants & trousers <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Jeans</a></li>
+                                                            <li><a href="category-sub-page.html">Casual</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="">Watches <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Navifoce</a></li>
+                                                            <li><a href="category-sub-page.html">Skmei</a></li>
+                                                            <li><a href="category-sub-page.html">Woodpecker</a></li>
+                                                            <li><a href="category-sub-page.html">Sonata</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Sunglass & Eyewear</a></li>
+                                                    <li><a href="category-sub-page.html">Walllets & belts</a></li>
+                                                    <li><a href="category-sub-page.html">Bags & backpacks</a></li>
+                                                    <li><a href="category-sub-page.html">Footwear <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Casual</a></li>
+                                                            <li><a href="category-sub-page.html">Formal</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Accessories <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Socks</a></li>
+                                                            <li><a href="category-sub-page.html">Shoes accessories</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Inner wear</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="category-page.html">Women fashion <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Saree</a></li>
+                                                    <li><a href="category-sub-page.html">Hijabs</a></li>
+                                                    <li><a href="category-sub-page.html">Salwar kamix & Kurtis <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Stitch</a></li>
+                                                            <li><a href="category-sub-page.html">Unstitch</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Footwear <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Shoes</a></li>
+                                                            <li><a href="category-sub-page.html">Shocks</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Bags & clutches</a></li>
+                                                    <li><a href="category-sub-page.html">Backpacks</a></li>
+                                                    <li><a href="category-sub-page.html">Western <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Tops</a></li>
+                                                            <li><a href="category-sub-page.html">Jackets & hoodies</a></li>
+                                                            <li><a href="category-sub-page.html">T-shirts</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Pant & trousers <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Pajama</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Watches</a></li>
+                                                    <li><a href="category-sub-page.html">Jewellery <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Necklace & pendants</a></li>
+                                                            <li><a href="category-sub-page.html">Earrings</a></li>
+                                                            <li><a href="category-sub-page.html">Nosepins</a></li>
+                                                            <li><a href="category-sub-page.html">Bangles</a></li>
+                                                            <li><a href="category-sub-page.html">Rings</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Lingerie & sleep wear <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Tank top and crop top</a></li>
+                                                            <li><a href="category-sub-page.html">Shoes accessories</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Sunglass & eyewear</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="category-page.html">Phones & tablets <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Phones <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Apple</a></li>
+                                                            <li><a href="category-sub-page.html">Samsung</a></li>
+                                                            <li><a href="category-sub-page.html">Huawei</a></li>
+                                                            <li><a href="category-sub-page.html">Nokia</a></li>
+                                                            <li><a href="category-sub-page.html">Oppo</a></li>
+                                                            <li><a href="category-sub-page.html">Maximus</a></li>
+                                                            <li><a href="category-sub-page.html">Symphony</a></li>
+                                                            <li><a href="category-sub-page.html">Vivo</a></li>
+                                                            <li><a href="category-sub-page.html">Realme</a></li>
+                                                            <li><a href="category-sub-page.html">Infinix</a></li>
+                                                            <li><a href="category-sub-page.html">OnePlus</a></li>
+                                                            <li><a href="category-sub-page.html">Motorola</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">GSM phones</a></li>
+                                                    <li><a href="category-sub-page.html">Tablets</a></li>
+                                                    <li><a href="category-sub-page.html">Smart watch</a></li>
+                                                    <li><a href="category-sub-page.html">Bluetooth speakers</a></li>
+                                                    <li><a href="category-sub-page.html">Earphone & Headsets</a></li>
+                                                    <li><a href="category-sub-page.html">Power bank</a></li>
+                                                    <li><a href="category-sub-page.html">Chargers & cables</a></li>
+                                                    <li><a href="category-sub-page.html">Mobile accessories <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Back covers</a></li>
+                                                            <li><a href="category-sub-page.html">Screen protector</a></li>
+                                                            <li><a href="category-sub-page.html">Others</a></li>
+                                                            <li><a href="category-sub-page.html">All the xiaomi accessories</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="category-page.html">Computer & Accessories
+                                                <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Laptop & Notebooks
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Apple</a></li>
+                                                            <li><a href="category-sub-page.html">Asus</a></li>
+                                                            <li><a href="category-sub-page.html">HP</a></li>
+                                                            <li><a href="category-sub-page.html">Lenovo</a></li>
+                                                            <li><a href="category-sub-page.html">I-Life</a></li>
+                                                            <li><a href="category-sub-page.html">Xiaomi</a></li>
+                                                            <li><a href="category-sub-page.html">Laptop Accessories</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Desktop PC</a></li>
+                                                    <li><a href="category-sub-page.html">Monitor</a></li>
+                                                    <li><a href="category-sub-page.html">Keyboard & Mouse <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Keyboard</a></li>
+                                                            <li><a href="category-sub-page.html">Mouse</a></li>
+                                                            <li><a href="category-sub-page.html">Mouse Pad</a></li>
+                                                            <li><a href="category-sub-page.html">Combo Products</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Router & Networking
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Router</a></li>
+                                                            <li><a href="category-sub-page.html">Network Accessories</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Storage
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Hard Drives</a></li>
+                                                            <li><a href="category-sub-page.html">Pendrive</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Audio Accessories
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Speaker</a></li>
+                                                            <li><a href="category-sub-page.html">Headset</a></li>
+                                                            <li><a href="category-sub-page.html">Microphone</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Printers & Scanners</a></li>
+                                                    <li><a href="category-sub-page.html">Accessories
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Cables & Converter</a></li>
+                                                            <li><a href="category-sub-page.html">Card Reader & Hubs</a></li>
+                                                            <li><a href="category-sub-page.html">Webcam</a></li>
+                                                            <li><a href="category-sub-page.html">Cooler</a></li>
+                                                            <li><a href="category-sub-page.html">LED Light Strip</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Gamers' Zone
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Laptop</a></li>
+                                                            <li><a href="category-sub-page.html">Keyboard & Mouse</a></li>
+                                                            <li><a href="category-sub-page.html">Game Controller</a></li>
+                                                            <li><a href="category-sub-page.html">Headsets</a></li>
+                                                            <li><a href="category-sub-page.html">Chair</a></li>
+                                                            <li><a href="category-sub-page.html">Computer & Accessories</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Projector</a></li>
+                                                    <li><a href="category-sub-page.html">Components
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Motherboard</a></li>
+                                                            <li><a href="category-sub-page.html">RAM</a></li>
+                                                            <li><a href="category-sub-page.html">Graphics Card</a></li>
+                                                            <li><a href="category-sub-page.html">Casing</a></li>
+                                                            <li><a href="category-sub-page.html">Power Supply (PSU)</a></li>
+                                                            <li><a href="category-sub-page.html">Optical drive</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Software
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Antivirus</a></li>
+                                                            <li><a href="category-sub-page.html">Operating System</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Power Solution
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Power Strips & Adapters</a></li>
+                                                            <li><a href="category-sub-page.html">UPS</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Computer Accessories Flash Sale</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="category-page.html">Electronic Accessories
+                                                <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Television
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Sony</a></li>
+                                                            <li><a href="category-sub-page.html">Samsung</a></li>
+                                                            <li><a href="category-sub-page.html">ELITE</a></li>
+                                                            <li><a href="category-sub-page.html">VEZIO</a></li>
+                                                            <li><a href="category-sub-page.html">NAPCO</a></li>
+                                                            <li><a href="category-sub-page.html">Minister</a></li>
+                                                            <li><a href="category-sub-page.html">Vision</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Kitchen Appliances
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Blender, Juicer & Grinder</a></li>
+                                                            <li><a href="category-sub-page.html">Electric & Microwave Oven</a></li>
+                                                            <li><a href="category-sub-page.html">Rice Cooker</a></li>
+                                                            <li><a href="category-sub-page.html">Water Purifier</a></li>
+                                                            <li><a href="category-sub-page.html">Toaster,Sandwich & Roti Maker</a></li>
+                                                            <li><a href="category-sub-page.html">Kettle</a></li>
+                                                            <li><a href="category-sub-page.html">Others</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Small & Other Appliances
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Fans</a></li>
+                                                            <li><a href="category-sub-page.html">Irons</a></li>
+                                                            <li><a href="category-sub-page.html">Torch Light and Lamps</a></li>
+                                                            <li><a href="category-sub-page.html">Water & Room Heaters</a></li>
+                                                            <li><a href="category-sub-page.html">Others</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Cameras
+                                                        <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Cameras</a></li>
+                                                            <li><a href="category-sub-page.html">Camera Accessories</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Hardware & Tools</a></li>
+                                                    <li><a href="category-sub-page.html">Air Conditioner</a></li>
+                                                    <li><a href="category-sub-page.html">Refrigerator</a></li>
+                                                    <li><a href="category-sub-page.html">Television Accessories</a></li>
+                                                    <li><a href="category-sub-page.html">Generators & IPS</a></li>
+                                                    <li><a href="category-sub-page.html">Washing Machine</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="category-page.html">Home & Living
+                                                <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Plastics</a></li>
+                                                    <li><a href="category-sub-page.html">Pans & Pots</a></li>
+                                                    <li><a href="category-sub-page.html">Kitchen Accessories</a></li>
+                                                    <li><a href="category-sub-page.html">Curtains & Covers</a></li>
+                                                    <li><a href="category-sub-page.html">Bathroom Accessories</a></li>
+                                                    <li><a href="category-sub-page.html">Home Decor
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Rugs & Carpets</a></li>
+                                                            <li><a href="category-sub-page.html">Table Mats & Runners</a></li>
+                                                            <li><a href="category-sub-page.html">Beanbag</a></li>
+                                                            <li><a href="category-sub-page.html">Party Essentials</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Knives & Silverware</a></li>
+                                                    <li><a href="category-sub-page.html">Cookware</a></li>
+                                                    <li><a href="category-sub-page.html">Travel Accessories</a></li>
+                                                    <li><a href="category-sub-page.html">Others</a></li>
+                                                    <li><a href="category-sub-page.html">Groceries</a></li>
+                                                    <li><a href="category-sub-page.html">Bedding
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Bed Sheets</a></li>
+                                                            <li><a href="category-sub-page.html">Pillows & Covers</a></li>
+                                                            <li><a href="category-sub-page.html">Net</a></li>
+                                                            <li><a href="category-sub-page.html">Quilts, Blankets & Comforters</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Storage & Organisation</a></li>
+                                                    <li><a href="category-sub-page.html">Ceramics</a></li>
+                                                    <li><a href="category-sub-page.html">Towels
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Towels and Napkins</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Dinning Utensils</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="category-page.html">Health & Beauty
+                                                <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Perfume & Deodorant
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Women</a></li>
+                                                            <li><a href="category-sub-page.html">Men</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Makeup
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Face Makeup</a></li>
+                                                            <li><a href="category-sub-page.html">Eye Makeup</a></li>
+                                                            <li><a href="category-sub-page.html">Lips</a></li>
+                                                            <li><a href="category-sub-page.html">Nails</a></li>
+                                                            <li><a href="category-sub-page.html">Brushes and Blenders</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Grooming Products
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Women</a></li>
+                                                            <li><a href="category-sub-page.html">Men</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Personal Care
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Others</a></li>
+                                                            <li><a href="category-sub-page.html">Whisper</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Body & Skin Care
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Women</a></li>
+                                                            <li><a href="category-sub-page.html">Men</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Hair Care</a></li>
+                                                    <li><a href="category-sub-page.html">Sports & Fitness</a></li>
+                                                    <li><a href="category-sub-page.html">Health Care Devices</a></li>
+                                                    <li><a href="category-sub-page.html">Bath & Body
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Hand Care</a></li>
+                                                            <li><a href="category-sub-page.html">Soap, Shower Gel & Scrubs</a></li>
+                                                            <li><a href="category-sub-page.html">Hair Removal</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Buy 1 Get 1</a></li>
+                                                    <li><a href="category-sub-page.html">Bicycle</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="category-page.html">Babies & Toys
+                                                <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Toys & Games</a></li>
+                                                    <li><a href="category-sub-page.html">Diaper & Wipes
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Pampers</a></li>
+                                                            <li><a href="category-sub-page.html">Others</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Babies Accessories</a></li>
+                                                    <li><a href="category-sub-page.html">Clothing
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Girls</a></li>
+                                                            <li><a href="category-sub-page.html">Boys</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="category-page.html">Sports & Outdoor
+                                                <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Exercise & Fitness
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">Treadmills</a></li>
+                                                            <li><a href="category-sub-page.html">Exercise Bikes</a></li>
+                                                            <li><a href="category-sub-page.html">Elliptical Trainers</a></li>
+                                                            <li><a href="category-sub-page.html">Fitness Accessories</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Team Sports</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="category-page.html">Automotive
+                                                <span class="category-toggle-icon"><i class="fas fa-chevron-down"></i></span></a>
+                                                <ul class="category-section-dropdown">
+                                                    <li><a href="category-sub-page.html">Motor Cycle</a></li>
+                                                    <li><a href="category-sub-page.html">Helmet
+                                                            <span class="category-toggle-icon"><i class="fas fa-plus"></i></span></a>
+                                                        <ul class="category-section-dropdown">
+                                                            <li><a href="category-sub-page.html">KYT</a></li>
+                                                            <li><a href="category-sub-page.html">Bilmola</a></li>
+                                                            <li><a href="category-sub-page.html">YOHE</a></li>
+                                                            <li><a href="category-sub-page.html">Gliders</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="category-sub-page.html">Accessories</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="direct-profile"></div>
+                                    </div>
+                                </div>
+                                <div class="category-section-f category-section-f-2" data-res-details="2"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 mt-10 hide">
+                            <div class="category-section box-shadow">
+                                <div class="category-section-title dashboard-title">
+                                    <h2>Back to shop</h2>
+                                </div>
+                                <div class="category-section-item dashboard-section-item">
+                                    <ul>
+                                        <li><a href="profile.html">Your profile</a></li>
+                                        <li><a href="order.html">Your orders</a></li>
+                                        <li class="self-new-bg"><a href="#">Your addresses</a></li>
+                                        <li><a href="sale-service.html">After sales service</a></li>
+                                        <li><a href="index.html">Sign out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-8 mt-10 m-col-12">
+                            <div class="category-full-content profile-box box-shadow">
+                                <div class="profile-title">
+                                    <h2>Your addresses</h2>
+                                </div>
+                                <div class="address-body">
+                                    <div class="current-add current-add-relative">
+                                        <div class="current-add-main">
+                                            <div class="fieid-item-add">
+                                                <h5>Address 1:</h5>
+                                                <div class="field-item-add-inner">
+                                                    <p>Azda Store</p>
+                                                    <p>Big Azda shopping Mall</p>
+                                                    <p>Montril, Canada</p>
+                                                </div>
+                                            </div>
+                                            <div class="address-state ads">
+                                                <button id="add-edit">Edit</button>
+                                                <span>|</span>
+                                                <button id="add-delete">Delete</button>
+                                            </div>
+                                        </div>
+                                        <div class="current-add-input" id="current-add-input">
+                                            <div class="payment-delivery-select">
+                                                <div class="payment-delivery-select-item">
+                                                    <div class="payment-delivery-select-input">
+                                                        <div class="delivery-input-inner one">
+                                                            <input type="text" class="al-value new-con" value="Sylhet" disabled="disabled">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="payment-delivery-select-item">
+                                                    <div class="payment-delivery-select-input">
+                                                        <div class="delivery-input-inner">
+                                                            <input type="text" value="Madina market"  class="al-value" disabled="disabled">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="current-address-form">
+                                                <div class="field-item-textarea">
+                                                    <label>Delivery address</label>
+                                                    <textarea rows="3" placeholder="Enter your delivery address">12/x</textarea>
+                                                </div>
+                                                <div class="field-item-receiver">
+                                                    <div class="field-receiver-input">
+                                                        <label>Contact name</label>
+                                                        <input type="text" placeholder="Write contact name" value="Pranto Protim Roy">
+                                                    </div>
+                                                    <div class="field-receiver-input">
+                                                        <label>Contact number</label>
+                                                        <input type="tel" placeholder="Write contact number" value="01781610033">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="current-add-btn">
+                                                <button class="current-save" id="current-save">Save</button>
+                                                <button class="current-cancel" id="current-cancel">Cancel</button>
+                                            </div>
+                                        </div>
+                                        <div class="add-del">
+                                            <div class="add-del-inner">
+                                                <p>Remove this address?</p>
+                                                <div class="add-del-inner-btn">
+                                                    <button id="pos">Yes</button>
+                                                    <button id="neg">No</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-address"> 
+                                        <div class="new-address-input" id="new-address-input">
+                                            <div class="new-add-show-field">
+                                                <div class="new-add-show-field-item">
+                                                    <h5>Address 2:</h5>
+                                                    <div class="new-add-show-details">
+                                                        <p>Online Store</p>
+                                                        <p>Millenium Shopping Mall</p>
+                                                        <p>Kardiff, Wales</p>
+                                                    </div>
+                                                </div>
+                                                <div class="address-state ads">
+                                                    <button class="add-edit">Edit</button>
+                                                    <span>|</span>
+                                                    <button class="add-delete">Delete</button>
+                                                </div>
+                                            </div>
+                                            <div class="current-add-input current-pad">
+                                                <div class="payment-delivery-select">
+                                                    <div class="payment-delivery-select-item">
+                                                        <div class="payment-delivery-select-input">
+                                                            <div class="delivery-input-inner one">
+                                                                <input type="text" class="new-con" placeholder="Select Location">
+                                                                <button><span><i class="fas fa-caret-down"></i></span></button>
+                                                            </div>
+                                                            <div class="delivery-dropdown">
+                                                                <ul class="select-city">
+                                                                    <li class="select-list select-city-list"></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="payment-delivery-select-item">
+                                                        <div class="payment-delivery-select-input">
+                                                            <div class="delivery-input-inner one">
+                                                                <input type="text" class="new-con" placeholder="Select area">
+                                                                <button><span><i class="fas fa-caret-down"></i></span></button>
+                                                            </div>
+                                                            <div class="delivery-dropdown">
+                                                                <ul class="select-area">
+                                                                    <li class="select-list select-area-list"></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="current-address-form">
+                                                    <div class="field-item-textarea">
+                                                        <label>Delivery address</label>
+                                                        <textarea  rows="3" placeholder="Enter your delivery address">12/x</textarea>
+                                                    </div>
+                                                    <div class="field-item-receiver">
+                                                        <div class="field-receiver-input">
+                                                            <label>Contact name</label>
+                                                            <input type="text" placeholder="Write contact name" value="Pranto Protim Roy">
+                                                        </div>
+                                                        <div class="field-receiver-input">
+                                                            <label>Contact number</label>
+                                                            <input type="tel" placeholder="Write contact number" value="01781610033">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="current-add-btn">
+                                                    <button class="current-save" id="cs">Save</button>
+                                                    <button class="current-cancel" id="cc">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-add-btn" id="new-add-btn">
+                                        <button>Add another</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end main section-->
+
+        <!--=============
+            Footer
+        =================-->
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="footer-item">
+                                <div class="footer-brand">
+                                    <figure>
+                                        <img src="assets/images/logo-footer.png" alt="appifylab">
+                                    </figure>
+                                </div>
+                                <div class="footer-details">
+                                    <p>ShopNow is an online shop that makes shopping easy. Order online or visit one of our Hubs or Agents to place your order, pick up your delivery or get any after sales service you need!</p>
+                                    <div class="footer-phone">
+                                        <h4><a href="">Phone: <span class="phone-num">+88 0173-919 0430</span></a></h4>
+                                    </div>
+                                    <div class="footer-social">
+                                        <ul>
+                                            <li><a href="#"><span><i class="fab fa-facebook-square"></i></span></a></li>
+                                            <li><a href="#"><span><i class="fab fa-linkedin"></i></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footer-item">
+                                <div class="footer-title">
+                                    <h4>ShopNow</h4>
+                                </div>
+                                <div class="footer-details">
+                                    <ul class="footer-list">
+                                        <li><a href="about.html"><span><i class="fas fa-chevron-right"></i></span>About</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footer-item">
+                                <div class="footer-title">
+                                    <h4>Help</h4>
+                                </div>
+                                <div class="footer-details">
+                                    <ul class="footer-list">
+                                        <li><a href=""><span><i class="fas fa-chevron-right"></i></span>Cancelletion & returns</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footer-item">
+                                <div class="footer-title">
+                                    <h4>Payment</h4>
+                                </div>
+                                <div class="footer-details">
+                                    <!-- <ul class="footer-list-img">
+                                        <li><img src="assets/images/bkash.svg" alt="appifylab"></li>
+                                        <li><img src="assets/images/rocket.svg" alt="appifylab"></li>
+                                    </ul> -->
+                                    <ul class="footer-list-img">
+                                        <!-- <li><img src="assets/images/cc-dbbl.svg" alt="appifylab"></li> -->
+                                        <li><img src="assets/images/cc-visa.svg" alt="appifylab"></li>
+                                        <li><img src="assets/images/cc-mastercard.svg" alt="appifylab"></li>
+                                        <li><img src="assets/images/cc-amex.svg" alt="appifylab"></li>
+                                    </ul>
+                                    <ul class="footer-list-img">
+                                        <li class="footer-list-img-big"><img src="assets/images/cash-on-delivery.svg" alt="appifylab"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom text-center">
+                        <div class="footer-add">
+                            <p>Latif Monjil, Modina Market, Sylhet.</p>
+                        </div>
+                        <div class="footer-bottom-list">
+                            <div class="footer-bottom-list-left">
+                                <ul>
+                                    <li><a href="">Return Policy</a></li>
+                                    <li>·</li>
+                                    <li><a href="">Tearms of Use</a></li>
+                                    <li>·</li>
+                                    <li><a href="">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-bottom-list-right">
+                                <p>© 2019 ShopNow Technology Ltd.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer-->
+
+        <!--=============
+            cart content
+        =================-->
+
+        <div class="modal-full-wrapper wrapper-close">
+            <div class="cart-modal eve-close-modal">
+                <div class="cart-modal-title">
+                    <h3>Shopping cart</h3>
+                    <div class="cart-modal-icon">
+                        <img src="assets/images/back-right.svg" alt="appifylab">
+                    </div>
+                </div>
+                <!-- <div class="cart-empty">
+                    <div class="empty-img">
+                        <figure>
+                            <img src="assets/images/shopping-cart.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="empty-text">
+                        <p>No Items Found!</p>
+                    </div>
+                </div> -->
+                <div class="cart-order-inner">
+                    <div class="cart-order-item">
+                        <div class="cart-order-item-top">
+                            <figure>
+                                <img src="assets/images/product-22210___medialibrary_original_669_501.webp" alt="appifylab">
+                            </figure>
+                            <div class="cart-order-title">
+                                <p>Sleep Time-Orthopedic Contour Pillow</p>
+                            </div>
+                        </div>
+                        <div class="cart-order-item-bottom">
+                            <ul>
+                                <li>$80</li>
+                                <li class="qu-op-2">
+                                    <button class="qu-btn inc">+</button>
+                                    <input type="text" class="qu-input" value="1">
+                                    <button class="qu-btn dec">-</button>
+                                </li>
+                                <li>$ 240</li>
+                            </ul>
+                        </div>
+                        <div class="card-order-save">
+                            <p>You saved <span>$200</span> on this item</p>
+                        </div>
+                    </div>
+                    <div class="cart-order-item">
+                        <div class="cart-order-item-top">
+                            <figure>
+                                <img src="assets/images/product-22210___medialibrary_original_669_501.webp" alt="appifylab">
+                            </figure>
+                            <div class="cart-order-title">
+                                <p>Sleep Time-Orthopedic Contour Pillow</p>
+                            </div>
+                        </div>
+                        <div class="cart-order-item-bottom">
+                            <ul>
+                                <li>$80</li>
+                                <li>Qty: 3</li>
+                                <li>$ 240</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-price-option">
+                    <div class="cart-price-sub fs">
+                        <h4>Subtotal</h4>
+                        <p>$ 480</p>
+                    </div>
+                </div>
+                <div class="cart-pop-coupon">
+                    <p>Coupon can be applied during checkout.</p>
+                    <div class="cart-coupon-btn">
+                        <a href="">Apply coupon</a>
+                        <div class="pay-with-btn">
+                            <button>Place order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal full wrapper-->
+
+        <!--=============
+            delivery content
+        =================-->
+        <div class="delivery-full-wrapper wrapper-close">
+            <div class="delivery-modal eve-close-modal">
+                <div class="delivery-modal-title">
+                    <h3>Set delivery point</h3>
+                    <div class="delivery-title-icon">
+                        <img src="assets/images/icon-emi.svg" alt="appifylab">
+                    </div>
+                </div>
+                <div class="delivery-modal-inner">
+                    <div class="delivery-modal-loc-input">
+                        <p>Please select your location and area</p>
+                        <div class="delivery-item-input-details">
+                            <div class="delivery-modal-loc-input-item">
+                                <div class="payment-delivery-select-input">
+                                    <div class="delivery-input-inner one">
+                                        <input type="text" class="new-con" placeholder="Select Location">
+                                        <button><span><i class="fas fa-caret-down"></i></span></button>
+                                    </div>
+                                    <div class="delivery-dropdown">
+                                        <ul class="select-city">
+                                            <li class="select-list select-city-list"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="delivery-modal-loc-input-item">
+                                <div class="payment-delivery-select-input">
+                                    <div class="delivery-input-inner one">
+                                        <input type="text" class="new-con" placeholder="Select Area">
+                                        <button><span><i class="fas fa-caret-down"></i></span></button>
+                                    </div>
+                                    <div class="delivery-dropdown">
+                                        <ul class="select-area">
+                                            <li class="select-list select-city-list"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-point">
+                        <p>Select your delivery point</p>
+                        <div class="delivery-point-inner">
+                            <div class="delivery-point-item" data-agent-icon="1">
+                                <img src="assets/images/store.png" alt="appifylab">
+                                <h4>Appi Agent</h4>
+                            </div>
+                            <div class="delivery-point-item" data-agent-icon="2">
+                                <img src="assets/images/house.png" alt="appifylab">
+                                <h4>Appi Hub</h4>
+                            </div>
+                            <div class="delivery-point-item" data-agent-icon="3">
+                                <img src="assets/images/delivery-truck.png" alt="appifylab">
+                                <h4>Delivery</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-point-details">
+                        <div class="delivery-point-details-item" data-agent-details="1">
+                            <p>We found the following dgAgents for Madina market. Please select your nearest one:</p>
+                            <div class="delivery-agent-add">
+                                <figure>
+                                    <img src="assets/images/agent.jpg" alt="appifylab">
+                                    <figcaption>
+                                        <img src="assets/images/man3.jpg" alt="appifylab">
+                                    </figcaption>
+                                </figure>
+                                <div class="agent-add-text">
+                                    <h5>Trader.com</h5>
+                                    <p>New York, NY</p>
+                                    <p>United States</p>
+                                </div>
+                            </div>
+                            <div class="delivery-agent-add">
+                                <figure>
+                                    <img src="assets/images/agent.jpg" alt="appifylab">
+                                    <figcaption>
+                                        <img src="assets/images/menn.jpg" alt="appifylab">
+                                    </figcaption>
+                                </figure>
+                                <div class="agent-add-text">
+                                    <h5>Lab cat</h5>
+                                    <p>London</p>
+                                    <p>United Kingdom</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-point-details-item" data-agent-details="2">
+                            <p>We found the following dgAgents for Madina market. Please select your nearest one:</p>
+                            <div class="delivery-agent-add">
+                                <figure>
+                                    <img src="assets/images/agent-764.webp" alt="appifylab">
+                                    <figcaption>
+                                        <img src="assets/images/agent-765.webp" alt="appifylab">
+                                    </figcaption>
+                                </figure>
+                                <div class="agent-add-text">
+                                    <h5>Mahi Enterprise</h5>
+                                    <p>Soifa Super Market, Hall Gate, Botessor</p>
+                                    <p>Botesshor, Sylhet</p>
+                                </div>
+                            </div>
+                            <div class="delivery-agent-add">
+                                <figure>
+                                    <img src="assets/images/agent-764.webp" alt="appifylab">
+                                    <figcaption>
+                                        <img src="assets/images/agent-765.webp" alt="appifylab">
+                                    </figcaption>
+                                </figure>
+                                <div class="agent-add-text">
+                                    <h5>Mahi Enterprise</h5>
+                                    <p>Soifa Super Market, Hall Gate, Botessor</p>
+                                    <p>Botesshor, Sylhet</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-point-details-item" data-agent-details="3">
+                            <p>Please sign in to add your home delivery address or see your saved addresses</p>
+                            <div class="delivery-auth-btn">
+                                <button>Sign-in or sign up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end delivery-->
+
+        <!--================
+				SCRIPT
+        ====================-->
+        
+
+		<!-- JQUERY-1.12.0 -->
+        <script src="assets/js/jquery-1.12.0.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.elevatezoom.js"></script>
+
+		<!-- MAIN.JS -->
+        <script src="assets/js/custom.js"></script>
+        
+    </body>
+</html>

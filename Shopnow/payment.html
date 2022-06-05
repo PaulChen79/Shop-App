@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="description" content="ShopNow">
+		<meta name="keywords" content="HTML,CSS,JavaScript">
+		<meta name="author" content="AppifyLab">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ShopNow</title>
+        <link rel="icon" href="assets/images/tab-logo-1.png" type="image/png" sizes="16x16" >
+
+        <!--===============
+			CSS FILES
+		=================-->
+		
+		<!-- Bootstrap CSS-->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all" />
+
+		<!-- Owl Carousel CSS -->
+		<link href="assets/css/owl.carousel.min.css" rel="stylesheet" >
+        <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" >
+        
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+        
+    </head>
+
+    <body>
+
+        <!-- Preloader -->
+		<div class="preloader">
+            <div class="preloader-wrapper">
+                <div class="ball-triangle">
+                    <img src="assets/fonts/ball-triangle.svg" width="60" alt="preloader">
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+
+        <!--=============
+            Navbar
+        =================-->
+
+        <nav>
+            <div class="container">
+                <div class="nav-inner">
+                    <div class="nav-brand">
+                        <div class="nav-back">
+                            <span><i class="fas fa-long-arrow-alt-left"></i></span>
+                        </div>
+                        <a href="index.html"><img src="assets/images/logo-header.png" alt="appifylab"></a>
+                    </div>
+                    <div class="nav-navigation pay-new-navigation">
+                        <ul>
+                            <li class="nav-navigation-list cart-list new-cart-list">
+                                <a href="#"><span><i class="fas fa-shopping-cart"></i></span><p class="cart-show">10</p></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end navbar-->
+
+
+        <!--=============
+            section content
+        =================-->
+
+        <section class="main-section mt-67">
+            <div class="container">
+                <div class="section-details">
+                    <div class="row payment-row">
+                        <div class="col-md-8 col-sm-8 mt-10">
+                            <div class="payment-box">
+                                <div class="payment-box-item box-shadow" id="payment-1">
+                                    <div class="payment-box-title">
+                                        <div class="payment-title-number">
+                                            <span class="payment-num">1</span>
+                                            <span class="payment-check"><i class="fas fa-check"></i></span>
+                                        </div>
+                                        <div class="payment-title-text">
+                                            <h3>Customer details</h3>
+                                        </div>
+                                    </div>
+                                    <div class="payment-item-details">
+                                        <div class="payment-item-verifaction">
+                                            <div class="verification-image">
+                                                <figure>
+                                                    <img src="assets/images/shopbanner.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="verification-box">
+                                                <div class="verification-details-social verification-details-social-1">
+                                                    <p>One-click sign in or sign up to Commercify if your account is connected to Facebook.</p>
+                                                    <button class="social-login"><span><i class="fab fa-facebook-square"></i></span>Continue with facebook</button>
+                                                    <div class="new-connect-login new-con">
+                                                        <a href="">Sign in or sign up with phone number</a>
+                                                    </div>
+                                                </div>
+                                                <div class="verification-details-social verification-details-social-2">
+                                                    <form onsubmit="return false;" name="my-form" novalidate>
+                                                        <p>We need your mobile number to confirm your order.</p>
+                                                        <div class="modal-input-box new-in-1" id="new-in-1">
+                                                            <label>Mobile number</label>
+                                                            <input type="tel" placeholder="Enter customer's mobile number" required="">
+                                                            <div class="required-box req-b" id="req-1"><p>Mobile number is required</p></div>
+                                                        </div>
+                                                        <div class="modal-input-new">
+                                                            <!-- <div class="modal-input-box">
+                                                                <label for="">Name</label>
+                                                                <input type="text" placeholder="Enter your name" required="">
+                                                                <div class="required-box" style="display: none;"><p>Name is required</p></div>
+                                                            </div> -->
+                                                            <div class="modal-input-box otp" id="new-in-2">
+                                                                <label>OTP code</label>
+                                                                <input type="text" placeholder="Enter otp code here" required="">
+                                                                <div class="required-box req-b" id="req-2"><p>OTP is required</p></div>
+                                                                <div class="input-message">
+                                                                    <p>We’ve sent 6-digit one time password in your phone: <span>123456789</span>. <a href=""> Didn't get SMS? Request Again</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-btn" id="m-btn">
+                                                            <button>Sign up</button>
+                                                        </div>
+                                                        <div class="connect-fb">
+                                                            <a href="">Sign in or sign up with facebook</a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-box-item box-shadow" id="payment-2">
+                                    <div class="payment-box-title">
+                                        <div class="payment-title-number">
+                                            <span class="payment-num">2</span>
+                                            <span class="payment-check"><i class="fas fa-check"></i></span>
+                                        </div>
+                                        <div class="payment-title-text">
+                                            <h3>Delivery details</h3>
+                                        </div>
+                                    </div>
+                                    <div class="payment-item-details">
+                                        <div class="payment-delivery-details">
+                                            <div class="payment-delivery-prog">
+                                                <address>
+                                                    <p class="delivery-title">Pickup from Nearest Commercify Agent</p>
+                                                    <p>Delivery charge: <span>Free</span></p>
+                                                    <div class="agent-add">
+                                                        <figure>
+                                                            <img src="assets/images/shop2.jpg" alt="">
+                                                            <figcaption>
+                                                                <img src="assets/images/shopman.jpg" alt="">
+                                                            </figcaption>
+                                                        </figure>
+                                                        <div class="agent-add-text">
+                                                            <p>Online Store</p>
+                                                            <p>Millenium Shopping Mall</p>
+                                                            <p>Kardiff, Wales</p>
+                                                        </div>
+                                                    </div>
+                                                </address>
+                                                <div class="delivery-use-btn">
+                                                    <button>Use different delivery point</button>
+                                                </div>
+                                            </div>
+                                            <div class="payment-delivery-loc">
+                                                <div class="payment-back-btn">
+                                                    <button><span><i class="fas fa-arrow-left"></i></span>Go back</button>
+                                                </div>
+                                                <div class="payment-delivery-select">
+                                                    <div class="payment-delivery-select-item">
+                                                        <div class="payment-delivery-select-input">
+                                                            <label>Location</label>
+                                                            <div class="delivery-input-inner one">
+                                                                <input type="text" class="new-con" placeholder="Select Location">
+                                                                <button><span><i class="fas fa-caret-down"></i></span></button>
+                                                            </div>
+                                                            <div class="delivery-dropdown">
+                                                                <ul id="select-city">
+                                                                    <li class="select-list select-city-list"></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="payment-delivery-select-item">
+                                                        <div class="payment-delivery-select-input">
+                                                            <label>Area</label>
+                                                            <div class="delivery-input-inner">
+                                                                <input type="text" placeholder="Set your area">
+                                                                <button><span><i class="fas fa-caret-down"></i></span></button>
+                                                            </div>
+                                                            <div class="delivery-dropdown">
+                                                                <ul id="select-area">
+                                                                    <li class="select-list select-area-list"></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-delivery-method">
+                                                    <h4>Delivery method</h4>
+                                                    <div class="delivery-method-field">
+                                                        <div class="delivery-method-field-item">
+                                                            <div class="field-item-main">
+                                                                <input type="radio" id="radio1" name="rad" class="rad-act">
+                                                                <div class="field-label">
+                                                                    <label for="radio1"></label>
+                                                                    <div class="service-text">
+                                                                        <h3>Home delivery service</h3>
+                                                                        <p>We will send your product in your home.</p>
+                                                                    </div>
+                                                                    <div class="service-fee">
+                                                                        <p>$ <span>80</span></p>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- <label for="radio1">
+                                                                    <div class="service-text">
+                                                                        <h3>Home delivery service</h3>
+                                                                        <p>We will send your product in your home.</p>
+                                                                    </div>
+                                                                    <div class="service-fee">
+                                                                        <p>$ <span>80</span></p>
+                                                                    </div>
+                                                                </label> -->
+                                                            </div>
+                                                            <div class="field-item-inner">
+                                                                <div class="field-item-textarea">
+                                                                    <label>Delivery address</label>
+                                                                    <textarea rows="3" placeholder="Enter your delivery address"></textarea>
+                                                                </div>
+                                                                <div class="field-item-receiver">
+                                                                    <div class="field-receiver-input">
+                                                                        <label>Contact name</label>
+                                                                        <input type="text" placeholder="Write contact name">
+                                                                    </div>
+                                                                    <div class="field-receiver-input">
+                                                                        <label>Contact number</label>
+                                                                        <input type="tel" placeholder="Write contact number">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="delivery-method-field-item">
+                                                            <div class="field-item-main">
+                                                                <input type="radio" id="radio2" name="rad" class="rad-act">
+                                                                <div class="field-label">
+                                                                    <label for="radio2"></label>
+                                                                    <div class="service-text">
+                                                                        <h3>Spot Purchase</h3>
+                                                                        <p>You can easily get your product from nearest agent shop.</p>
+                                                                    </div>
+                                                                    <div class="service-fee">
+                                                                        <p>$ <span>0</span></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field-item-inner">
+                                                                <div class="fieid-item-add">
+                                                                    <h5>Address:</h5>
+                                                                    <div class="field-item-add-inner">
+                                                                        <p>Online Store</p>
+                                                                        <p>Millenium Shopping Mall</p>
+                                                                        <p>Kardiff, Wales</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="field-change-btn">
+                                                                    <button>Change</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="delivery-method-field-item">
+                                                            <div class="field-item-main">
+                                                                <input type="radio" id="radio3" name="rad" class="rad-act">
+                                                                <div class="field-label">
+                                                                    <label for="radio3"></label>
+                                                                    <div class="service-text">
+                                                                        <h3>Collect from hub</h3>
+                                                                        <p>Collect your product from your nearest hub</p>
+                                                                    </div>
+                                                                    <div class="service-fee">
+                                                                        <p><span>Free</span></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field-item-inner ">
+                                                                <div class="field-change-btn">
+                                                                    <button>Select hub</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="payment-additional">
+                                                <div class="payment-additional-input">
+                                                    <label>Additional Note</label>
+                                                    <input type="text" placeholder="Leave any additional notes">
+                                                </div>
+                                            </div>
+                                            <div class="payment-invoice">
+                                                <div class="payment-invoice-check">
+                                                    <input type="checkbox" id="check1">
+                                                    <label for="check1">Send invoice</label>
+                                                </div>
+                                                <div class="payment-invo-cp">
+                                                    <div class="payment-invo-cp-input">
+                                                        <label>Invoice email</label>
+                                                        <input type="text" placeholder="Enter your email here">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="payment-confirm-btn" id="btn-disable">
+                                                <button>Confirm order</button>
+                                                <p>I hereby agree with the <a href="#">Terms of Service</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-box-item box-shadow" id="payment-3">
+                                    <div class="payment-box-title">
+                                        <div class="payment-title-number">
+                                            <span class="payment-num">3</span>
+                                            <span class="payment-check"><i class="fas fa-check"></i></span>
+                                        </div>
+                                        <div class="payment-title-text">
+                                            <h3>Payment</h3>
+                                        </div>
+                                    </div>
+                                    <div class="payment-item-details">
+                                        <div class="make-payment-details">
+                                            <div class="make-payment-left">
+                                                <h4>Select payment option</h4>
+                                                <div class="make-payment-inner">
+                                                    <div class="field-item-main" id="self-bkash-input">
+                                                        <input type="radio" id="radio4" name="rad1" class="pay-act">
+                                                        <div class="field-label field-label-pad">
+                                                            <label for="radio4"></label>
+                                                            <div class="service-text">
+                                                                <h3>Pay Now</h3>
+                                                                <p>Pay using different payment method</p>
+                                                            </div>
+                                                            <div class="service-fee">
+                                                                <span>Pay now</span>
+                                                                <p>$ <span>80</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="make-payment-inner">
+                                                    <div class="field-item-main" id="self-cash-input">
+                                                        <input type="radio" id="radio5" name="rad1" class="pay-act">
+                                                        <div class="field-label field-label-pad">
+                                                            <label for="radio5"></label>
+                                                            <div class="service-text">
+                                                                <h3>Cash on Delivery</h3>
+                                                                <p>pay using cash on Delivery</p>
+                                                            </div>
+                                                            <div class="service-fee">
+                                                                <span>Pay now</span>
+                                                                <p>$ <span>80</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pay-with-btn mt-10" id="self-cash">
+                                                    <button>Confirm Cash on Delivery</button>
+                                                </div>
+                                            </div>
+                                            <div class="make-payment-right">
+                                                <h4>Select payment method</h4>
+                                                <!-- <div class="make-payment-inner">
+                                                    <div class="field-item-main make-pay">
+                                                        <input type="radio" id="radio6" name="rad2" class="pay-act">
+                                                        <div  class="new-label">
+                                                            <div class="service-text">
+                                                                <h3>bKash</h3>
+                                                            </div>
+                                                            <div class="service-img">
+                                                                <img src="assets/images/bkash10.svg" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field-payment-details">
+                                                        <p>Pay online with your bKash personal account, and complete purchase immediately.</p>
+                                                        <div class="pay-with-btn">
+                                                            <button>Pay with BKash</button>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="make-payment-inner">
+                                                    <div class="field-item-main make-pay pad-15">
+                                                        <!-- <input type="radio" id="radio7" name="rad2" class="pay-act"> -->
+                                                        <div  class="new-label">
+                                                            <!-- <label for="radio7"></label> -->
+                                                            <div class="service-text">
+                                                                <h3>Online Payment</h3>
+
+                                                                <div class="new-payment-img">
+                                                                    <ul>
+                                                                        <li><img src="assets/images/rocket.svg" alt=""></li>
+                                                                        <li><img src="assets/images/cc-dbbl.svg" alt=""></li>
+                                                                        <li><img src="assets/images/cc-visa.svg" alt=""></li>
+                                                                        <li><img src="assets/images/cc-mastercard.svg" alt=""></li>
+                                                                        <li><img src="assets/images/cc-amex.svg" alt=""></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="field-payment-details">
+                                                        <div class="pay-with-btn mt-10">
+                                                            <button>Make payment</button>
+                                                        </div>
+                                                        <p class="hereby-text">I hereby agree with the <a href="#">Terms of Service</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 mt-10">
+                            <div class="cart-full-box box-shadow">
+                                <div class="order-title">
+                                    <h3>Shopping cart</h3>
+                                    <div class="delivery-title-icon new-delivery-icon">
+                                        <img src="assets/images/icon-emi.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="cart-order-inner">
+                                    <div class="cart-order-item">
+                                        <div class="cart-order-item-top">
+                                            <figure>
+                                                <img src="assets/images/man1.png" alt="">
+                                            </figure>
+                                            <div class="cart-order-title">
+                                                <p>Original Leather Wallet For Men(BROWN)</p>
+                                            </div>
+                                        </div>
+                                        <div class="cart-order-item-bottom">
+                                            <ul>
+                                                <li>$80</li>
+                                                <li class="qu-op-2">
+                                                    <button class="qu-btn inc">+</button>
+                                                    <input type="text" class="qu-input" value="1">
+                                                    <button class="qu-btn dec">-</button>
+                                                </li>
+                                                <li>$ 240</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-order-save">
+                                            <p>You saved <span>$200</span> on this item</p>
+                                        </div>
+                                    </div>
+                                    <div class="cart-order-item">
+                                        <div class="cart-order-item-top">
+                                            <figure>
+                                                <img src="assets/images/man1.png" alt="">
+                                            </figure>
+                                            <div class="cart-order-title">
+                                                <p>Original Leather Wallet For Men(BROWN)</p>
+                                            </div>
+                                        </div>
+                                        <div class="cart-order-item-bottom">
+                                            <ul>
+                                                <li>$80</li>
+                                                <li>Qty: 3</li>
+                                                <li>$ 240</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-price-option">
+                                    <div class="cart-price-sub">
+                                        <h4>Subtotal</h4>
+                                        <p>$ 480</p>
+                                    </div>
+                                    <div class="cart-price-sub">
+                                        <h4>Delivery charge</h4>
+                                        <p class="red">Free delivery</p>
+                                    </div>
+                                    <div class="cart-price-sub big-sub">
+                                        <h4>Order Total</h4>
+                                        <p>$ 480</p>
+                                    </div>
+                                </div>
+                                <div class="cart-coupon">
+                                    <input type="text" placeholder="Have coupon code? Enter here">
+                                    <button>Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end main section-->
+
+        <!--=============
+            Footer
+        =================-->
+
+        <!-- <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="footer-item">
+                                <div class="footer-brand">
+                                    <a href="">
+                                        <figure>
+                                            <img src="assets/images/logo-footer.svg" alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="footer-details">
+                                    <p>Commercify is an online shop that makes shopping easy. Order online or visit one of our Hubs or Agents to place your order, pick up your delivery or get any after sales service you need!</p>
+                                    <div class="footer-phone">
+                                        <h4><a href="">Phone: <span class="phone-num">+88 0173-919 0430</span></a></h4>
+                                    </div>
+                                    <div class="footer-social">
+                                        <ul>
+                                            <li><a href=""><span><i class="fab fa-facebook-square"></i></span></a></li>
+                                            <li><a href=""><span><i class="fab fa-instagram"></i></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footer-item">
+                                <div class="footer-title">
+                                    <h4>Commercify</h4>
+                                </div>
+                                <div class="footer-details">
+                                    <ul class="footer-list">
+                                        <li><a href=""><span><i class="fas fa-chevron-right"></i></span>About</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footer-item">
+                                <div class="footer-title">
+                                    <h4>Help</h4>
+                                </div>
+                                <div class="footer-details">
+                                    <ul class="footer-list">
+                                        <li><a href=""><span><i class="fas fa-chevron-right"></i></span>Cancelletion & returns</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footer-item">
+                                <div class="footer-title">
+                                    <h4>Payment</h4>
+                                </div>
+                                <div class="footer-details">
+                                    <ul class="footer-list-img">
+                                        <li><img src="assets/images/bkash.svg" alt=""></li>
+                                        <li><img src="assets/images/rocket.svg" alt=""></li>
+                                    </ul>
+                                    <ul class="footer-list-img">
+                                        <li><img src="assets/images/cc-dbbl.svg" alt=""></li>
+                                        <li><img src="assets/images/cc-visa.svg" alt=""></li>
+                                        <li><img src="assets/images/cc-mastercard.svg" alt=""></li>
+                                        <li><img src="assets/images/cc-amex.svg" alt=""></li>
+                                    </ul>
+                                    <ul class="footer-list-img">
+                                        <li class="footer-list-img-big"><img src="assets/images/cash-on-delivery.svg" alt=""></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom text-center">
+                        <div class="footer-add">
+                            <p>Latif Monjil, Modina Market, Sylhet.</p>
+                        </div>
+                        <div class="footer-bottom-list">
+                            <div class="footer-bottom-list-left">
+                                <ul>
+                                    <li><a href="">Return Policy</a></li>
+                                    <li>·</li>
+                                    <li><a href="">Tearms of Use</a></li>
+                                    <li>·</li>
+                                    <li><a href="">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-bottom-list-right">
+                                <p>© 2019 Commercify Technology Ltd. <span>A <img src="assets/images/foo-affiliated.svg" alt=""> affiliated company</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+        
+        <!-- <div class="modal-full-wrapper wrapper-close new-modal-wrapper">
+
+        </div> -->
+       
+        <!--================
+				SCRIPT
+        ====================-->
+        
+
+		<!-- JQUERY-1.12.0 -->
+        <script src="assets/js/jquery-1.12.0.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.elevatezoom.js"></script>
+
+		<!-- MAIN.JS -->
+        <script src="assets/js/custom.js"></script>
+        
+    </body>
+</html>
