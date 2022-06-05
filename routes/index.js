@@ -1,10 +1,12 @@
 const express = require('express')
 const router = express.Router()
 const { errorHandler } = require('../middleware/error-handler')
+const adminRoutes = require('./admin/admin-routes')
+const userController = require('../controllers/user-controller')
 
-router.get('/', (req, res) => {
-  res.send('hello')
-})
+router.use('/admin', adminRoutes)
+
+router.get('/login', userController.getLoginPage)
 
 router.use('/', errorHandler)
 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="ShopNow">
+      <meta name="keywords" content="HTML,CSS,JavaScript">
+      <meta name="author" content="AppifyLab">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ShopNow</title>
+      <link rel="icon" href="/assets/images/tab-logo-1.png" type="image/png" sizes="16x16" >
+
+      <!--===============
+        CSS FILES
+      =================-->
+      
+      <!-- Bootstrap CSS-->
+      <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" media="all" />
+
+      <!-- Owl Carousel CSS -->
+      <link href="/assets/css/owl.carousel.min.css" rel="stylesheet" >
+      <link href="/assets/css/owl.theme.default.min.css" rel="stylesheet" >
+      
+      <!-- Font Awesome CSS -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all" />
+        
+    </head>
+
+
+    <body>
+      <div class="preloader">
+          <div class="preloader-wrapper">
+              <div class="ball-triangle">
+                  <img src="/assets/fonts/ball-triangle.svg" width="60" alt="preloader">
+              </div>
+          </div>
+      </div>
+      <nav>
+          <div class="container">
+              <div class="nav-inner">
+                  <div class="nav-brand">
+                      <div class="nav-category-menu">
+                          <span><i class="fas fa-bars"></i></span>
+                      </div>
+                      <a href="index.html"><img src="assets/images/logo-header.png" alt="appifylab"></a>
+                  </div>
+                  <div class="nav-search-bar">
+                      <form action="#">
+                          <div class="nav-search-locat">
+                              <div class="nav-search-locat-inner" id="location-delivery">
+                                  <span><i class="fas fa-map-marker-alt"></i></span>
+                              </div>
+                          </div>
+                          <div class="nav-search-input">
+                              <div class="nav-search-input-inner">
+                                  <input type="text" placeholder="Search for products">
+                              </div>
+                          </div>
+                          <div class="nav-search-icon">
+                              <div class="nav-search-icon-inner">
+                                  <button onclick="window.location.href='search-page.html'"><span><i class="fas fa-search"></i></span></button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="nav-navigation">
+                      <ul>
+                          <li class="nav-navigation-list">
+                              <a href="#">English</a>
+                          </li>
+                          <li class="nav-navigation-list click-auth navi-move">
+                              <a href="#">Sign-in or signup</a>
+                          </li>
+                          <li class="nav-navigation-list cart-list">
+                              <a href="#"><span><i class="fas fa-shopping-cart"></i></span><p class="cart-show">10</p></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="nav-bottom-list">
+
+              </div>
+          </div>
+      </nav>
+      {{>header}}
+      {{{body}}}
+  
+      <script src="/assets/js/jquery-1.12.0.min.js"></script>
+      <script src="/assets/js/owl.carousel.min.js"></script>
+      <script src="/assets/js/jquery.elevatezoom.js"></script>
+
+      <!-- MAIN.JS -->
+      <script src="/assets/js/custom.js"></script>
+        
+    </body>
+</html>
