@@ -7,6 +7,7 @@ const userController = require('../controllers/user-controller')
 router.use('/admin', adminRoutes)
 
 router.get('/login', userController.getLoginPage)
+router.get('/register', userController.getRegisterPage)
 
 router.use('/', errorHandler)
 

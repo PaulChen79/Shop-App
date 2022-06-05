@@ -1,98 +1,199 @@
-<!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="description" content="ShopNow">
-      <meta name="keywords" content="HTML,CSS,JavaScript">
-      <meta name="author" content="AppifyLab">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>ShopNow</title>
-      <link rel="icon" href="/assets/images/tab-logo-1.png" type="image/png" sizes="16x16" >
-
-      <!--===============
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="ShopNow" />
+    <meta name="keywords" content="HTML,CSS,JavaScript" />
+    <meta name="author" content="AppifyLab" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      ShopNow
+    </title>
+    <link
+      rel="icon"
+      href="/assets/images/tab-logo-1.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <!--===============
         CSS FILES
       =================-->
-      
-      <!-- Bootstrap CSS-->
-      <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" media="all" />
-
-      <!-- Owl Carousel CSS -->
-      <link href="/assets/css/owl.carousel.min.css" rel="stylesheet" >
-      <link href="/assets/css/owl.theme.default.min.css" rel="stylesheet" >
-      
-      <!-- Font Awesome CSS -->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-      <!-- Custom CSS -->
-      <link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all" />
-        
-    </head>
-
-
-    <body>
-      <div class="preloader">
-          <div class="preloader-wrapper">
-              <div class="ball-triangle">
-                  <img src="/assets/fonts/ball-triangle.svg" width="60" alt="preloader">
-              </div>
-          </div>
+    <!-- Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="/assets/css/bootstrap.min.css"
+      type="text/css"
+      media="all"
+    />
+    <!-- Owl Carousel CSS -->
+    <link href="/assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="/assets/css/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="ball-triangle">
+          <img
+            src="/assets/fonts/ball-triangle.svg"
+            width="60"
+            alt="preloader"
+          />
+        </div>
       </div>
-      <nav>
-          <div class="container">
-              <div class="nav-inner">
-                  <div class="nav-brand">
-                      <div class="nav-category-menu">
-                          <span><i class="fas fa-bars"></i></span>
-                      </div>
-                      <a href="index.html"><img src="assets/images/logo-header.png" alt="appifylab"></a>
-                  </div>
-                  <div class="nav-search-bar">
-                      <form action="#">
-                          <div class="nav-search-locat">
-                              <div class="nav-search-locat-inner" id="location-delivery">
-                                  <span><i class="fas fa-map-marker-alt"></i></span>
-                              </div>
-                          </div>
-                          <div class="nav-search-input">
-                              <div class="nav-search-input-inner">
-                                  <input type="text" placeholder="Search for products">
-                              </div>
-                          </div>
-                          <div class="nav-search-icon">
-                              <div class="nav-search-icon-inner">
-                                  <button onclick="window.location.href='search-page.html'"><span><i class="fas fa-search"></i></span></button>
-                              </div>
-                          </div>
-                      </form>
-                  </div>
-                  <div class="nav-navigation">
-                      <ul>
-                          <li class="nav-navigation-list">
-                              <a href="#">English</a>
-                          </li>
-                          <li class="nav-navigation-list click-auth navi-move">
-                              <a href="#">Sign-in or signup</a>
-                          </li>
-                          <li class="nav-navigation-list cart-list">
-                              <a href="#"><span><i class="fas fa-shopping-cart"></i></span><p class="cart-show">10</p></a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="nav-bottom-list">
-
-              </div>
+    </div>
+    <nav>
+      <div class="container">
+        <div class="nav-inner">
+          <div class="nav-brand">
+            <div class="nav-category-menu">
+              <span>
+                <i class="fas fa-bars"></i>
+              </span>
+            </div>
+            <a href="/">
+              <img src="/assets/images/logo-header.png" alt="appifylab" />
+            </a>
           </div>
-      </nav>
-      {{>header}}
-      {{{body}}}
-  
-      <script src="/assets/js/jquery-1.12.0.min.js"></script>
-      <script src="/assets/js/owl.carousel.min.js"></script>
-      <script src="/assets/js/jquery.elevatezoom.js"></script>
-
-      <!-- MAIN.JS -->
-      <script src="/assets/js/custom.js"></script>
-        
-    </body>
+          <div class="nav-search-bar">
+            <form action="#">
+              <div class="nav-search-locat">
+                <div class="nav-search-locat-inner" id="location-delivery">
+                  <span>
+                    <i class="fas fa-map-marker-alt"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="nav-search-input">
+                <div class="nav-search-input-inner">
+                  <input type="text" placeholder="Search for products" />
+                </div>
+              </div>
+              <div class="nav-search-icon">
+                <div class="nav-search-icon-inner">
+                  <button type="submit">
+                    <span>
+                      <i class="fas fa-search"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="nav-navigation">
+            {{#if user}}
+              <ul>
+                <li class="nav-navigation-list click-prof navi-move">
+                  <a href="#">
+                    <img src="/assets/images/dgMan.svg" alt="" />
+                  </a>
+                  <span></span>
+                  <ul class="prop-dropdown">
+                    <li>
+                      <a href="/users/{{user.id}}">
+                        Hi
+                        {{user.userName}}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/users/{{user.id}}">
+                        Your profile
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Your orders
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Your addresses
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        After sales services
+                      </a>
+                    </li>
+                    {{#if user.isAdmin}}
+                      <li>
+                        <a href="">
+                          Back stage
+                        </a>
+                      </li>
+                    {{/if}}
+                    <li>
+                      <a href="/logout">
+                        Log out
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-navigation-list cart-list">
+                  <a href="#">
+                    <span>
+                      <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <p class="cart-show">
+                      {{#if user.Cart.Products}}
+                        {{getCartAmount user.Cart.Products}}
+                      {{else}}
+                        0
+                      {{/if}}
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            {{else}}
+              <ul>
+                <li class="nav-navigation-list click-prof navi-move">
+                  <a href="#">
+                    <img src="/assets/images/dgMan.svg" alt="" />
+                  </a>
+                  <span></span>
+                  <ul class="prop-dropdown">
+                    <li>
+                      <a href="/login">
+                        Login
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            {{/if}}
+          </div>
+        </div>
+        <div class="nav-bottom-list"></div>
+      </div>
+    </nav>
+    {{{body}}}
+    <script src="/assets/js/jquery-1.12.0.min.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/jquery.elevatezoom.js"></script>
+    <!-- MAIN.JS -->
+    <script src="/assets/js/custom.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
