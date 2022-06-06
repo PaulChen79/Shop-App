@@ -1,0 +1,38 @@
+<div class="container mt-67">
+  {{>admin-tabs route='categories'}}
+<a href='/admin/categories/create'>
+  <button type="button" class="btn btn-primary">New Products</button>
+</a>
+<br />
+<br />
+<table class="table align-middle">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Category</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each categories}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td class="">
+          <button type="button" class="btn btn-link">
+            <a class="btn btn-link link-primary" href="/admin/categories/{{this.id}}">
+              Show
+            </a>
+          </button>
+          <button type="button" class="btn btn-link">
+            <a class="btn btn-link link-primary" href="/admin/categories/{{this.id}}/edit">
+              Edit
+            </a>
+          </button>
+          <form action="/admin/categories/{{this.id}}?_method=DELETE" method="POST" style="display: inline;" class="align-self-center">
+            <button type="submit" class="btn btn-link link-danger" onclick="return confirm(`確定要刪除 {{ this.name }} 嗎？`)">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
