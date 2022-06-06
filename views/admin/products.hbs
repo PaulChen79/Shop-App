@@ -23,7 +23,11 @@
         <th scope="row">{{this.id}}</th>
         <td><img class="img-responsive center-block" src="{{this.SKU.image}}" style="width: 100px; border-radius: 50px; transition: opacity 0.5s; opacity:0;" onload="this.style.opacity=1;"></td>
         <td>{{this.name}}</td>
-        <td>{{this.Category.name}}</td>
+        <td>{{#if this.Category.parent.name}}
+              [{{this.Category.parent.name}}] ->
+            {{/if}}
+            [{{this.Category.name}}]
+        </td>
         <td>{{this.invetory}}</td>
         <td>${{this.SKU.price}}</td>
         <td class="">

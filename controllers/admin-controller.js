@@ -9,7 +9,7 @@ const adminController = {
             model: Category,
             include: {
               model: Category,
-              as: 'subCategories',
+              as: 'parent',
               required: false
             }
           }
