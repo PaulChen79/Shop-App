@@ -1,6 +1,48 @@
-<div class="container">
-      {{>header}}
-  <h1>
-    admin products
-  </h1>
+<div class="container mt-67">
+  {{>admin-tabs route='products'}}
+<a href='/admin/products/create'>
+  <button type="button" class="btn btn-primary">New Products</button>
+</a>
+<br />
+<br />
+<table class="table align-middle">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Invetory</th>
+      <th scope="col">Price</th>
+      <th scope="col" class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each products}}
+      <tr>
+        <th scope="row">{{this.id}}</th>
+        <td>{{this.image}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.Category.name}}</td>
+        <td>{{this.invetory}}</td>
+        <td>${{this.price}}</td>
+        <td class="d-flex justify-content-center">
+          <button type="button" class="btn btn-link">
+            <a class="btn btn-link link-primary" href="/admin/products/{{this.id}}">
+              Show
+            </a>
+          </button>
+          <button type="button" class="btn btn-link">
+            <a class="btn btn-link link-primary" href="/admin/products/{{this.id}}/edit">
+              Edit
+            </a>
+          </button>
+          <form action="/admin/products/{{this.id}}?_method=DELETE" method="POST" style="display: inline;" class="align-self-center">
+            <button type="submit" class="btn btn-link link-danger" onclick="return confirm(`確定要刪除 {{ this.name }} 嗎？`)">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
 </div>

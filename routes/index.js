@@ -5,8 +5,7 @@ const passport = require('../config/passport')
 const adminRoutes = require('./admin/admin-routes')
 const userController = require('../controllers/user-controller')
 const productController = require('../controllers/product-controller')
-
-router.use('/admin', adminRoutes)
+const { authenticatedAdmin, authenticated } = require('../middleware/auth')
 
 router.get('/login', userController.getLoginPage)
 router.get('/register', userController.getRegisterPage)
@@ -14,7 +13,8 @@ router.post('/login', passport.authenticate('local', { failureRedirect: '/login'
 router.post('/register', userController.register)
 router.get('/logout', userController.logout)
 
-router.get('/products', productController.getProducts)
+router.use('/admin', authenticatedAdmin, adminRoutes)
+router.get('/products', authenticated, productController.getProducts)
 
 router.use('/', (req, res) => {
   res.redirect('/products')

@@ -5,6 +5,7 @@ const flash = require('connect-flash')
 const methodOverride = require('method-override')
 const exphbs = require('express-handlebars')
 const handlebarsHelpers = require('./helpers/handlebars-helpers')
+const { getUser } = require('./helpers/auth-helpers')
 const passport = require('./config/passport')
 const routes = require('./routes/index')
 const PORT = process.env.PORT || 3000
@@ -24,7 +25,7 @@ app.use((req, res, next) => {
   res.locals.success_msg = req.flash('success_msg')
   res.locals.warning_msg = req.flash('warning_msg')
   res.locals.error_msg = req.flash('error_msg')
-  res.locals.user = req.user
+  res.locals.user = getUser(req)
   next()
 })
 
