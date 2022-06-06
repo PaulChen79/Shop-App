@@ -21,6 +21,26 @@ const adminController = {
       next(error)
     }
   },
+  getProduct: async (req, res, next) => {
+    try {
+      const productId = req.params.id
+      const product = await Product.findByPk(productId, {
+        raw: true,
+        nest: true,
+        include: [SKU, {
+          model: Category,
+          include: {
+            model: Category,
+            as: 'parent',
+            required: false
+          }
+        }]
+      })
+      return res.render('admin/product', { product })
+    } catch (error) {
+      next(error)
+    }
+  },
   getCategoriesPage: async (req, res, next) => {
     try {
       let categories = await Category.findAll({
