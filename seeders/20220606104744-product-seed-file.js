@@ -17,6 +17,7 @@ module.exports = {
         spu_spec: faker.lorem.sentence(10),
         category_id: categories[Math.floor(Math.random() * categories.length)].id,
         sku_id: skus[Math.floor(Math.random() * skus.length)].id,
+        inventory: Math.floor(Math.random() * 300),
         created_at: new Date(),
         updated_at: new Date()
       }))

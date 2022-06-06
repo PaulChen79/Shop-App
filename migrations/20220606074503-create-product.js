@@ -26,7 +26,7 @@ module.exports = {
       discount_id: {
         type: Sequelize.INTEGER
       },
-      invemtory: {
+      inventory: {
         type: Sequelize.INTEGER
       },
       created_at: {
