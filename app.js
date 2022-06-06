@@ -4,13 +4,14 @@ const session = require('express-session')
 const flash = require('connect-flash')
 const methodOverride = require('method-override')
 const exphbs = require('express-handlebars')
+const handlebarsHelpers = require('./helpers/handlebars-helpers')
 const passport = require('./config/passport')
 const routes = require('./routes/index')
 const PORT = process.env.PORT || 3000
 
 const app = express()
 
-app.engine('hbs', exphbs.engine({ defaultLayout: 'main', extname: 'hbs' }))
+app.engine('hbs', exphbs.engine({ defaultLayout: 'main', extname: 'hbs', helpers: handlebarsHelpers }))
 app.set('view engine', 'hbs')
 app.use(express.urlencoded({ extended: true }))
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
