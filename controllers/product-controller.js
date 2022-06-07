@@ -16,6 +16,13 @@ const productController = {
     } catch (error) {
       next(error)
     }
+  },
+  getAboutPage: (req, res, next) => {
+    try {
+      res.render('about')
+    } catch (error) {
+      next(error)
+    }
   }
 }
 
