@@ -1,4 +1,6 @@
 const { Product, SKU, Category, User } = require('../models')
+const { Op } = require('sequelize')
+
 const adminController = {
   getProductsPage: async (req, res, next) => {
     try {
@@ -76,16 +78,67 @@ const adminController = {
   },
   getCategoriesPage: async (req, res, next) => {
     try {
-      let categories = await Category.findAll({
-        where: { parentId: null },
+      const categoryId = req.params.id
+      const category = await Category.findByPk(categoryId, {
+        raw: true,
+        nest: true,
         include: {
           model: Category,
-          as: 'subCategories',
+          as: 'parent',
           required: false
         }
       })
+      let categories = await Category.findAll({
+        include: {
+          model: Category,
+          as: 'parent',
+          required: false
+        }
+      })
+      const mainCategories = await Category.findAll({ raw: true, where: { parentId: null } })
+      console.log(category)
       categories = await categories.map(category => category.toJSON())
-      return res.render('admin/categories', { categories })
+      return res.render('admin/categories', { categories, category, mainCategories })
+    } catch (error) {
+      next(error)
+    }
+  },
+  createCategory: async (req, res, next) => {
+    try {
+      const { name, subName } = req.body
+      const category = await Category.findOne({
+        where: {
+          [Op.or]: [
+            { name },
+            { name: subName }
+          ]
+        }
+      })
+      if (category) {
+        req.flash('warning_msg', 'Category already exist.')
+        return res.redirect('/admin/categories')
+      }
+      if (subName) {
+        const parent = await Category.create({ name })
+        await Category.create({ name: subName, parentId: parent.id })
+      } else {
+        await Category.create({ name })
+      }
+      req.flash('success_msg', 'Category has created successfully')
+      return res.redirect('/admin/categories')
+    } catch (error) {
+      next(error)
+    }
+  },
+  editCategory: async (req, res, next) => {
+    try {
+      const id = req.params.id
+      const { categoryId, subName } = req.body
+      const category = await Category.findByPk(id)
+      if (!category) throw new Error('Category not exist')
+      await category.update({ name: subName, parentId: categoryId || null })
+      req.flash('success_msg', 'Category has updated successfully.')
+      res.redirect('/admin/categories')
     } catch (error) {
       next(error)
     }

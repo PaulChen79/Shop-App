@@ -1,10 +1,51 @@
 <div class="container mt-67">
   {{>admin-tabs route='categories'}}
-<a href='/admin/categories/create'>
-  <button type="button" class="btn btn-primary">New Products</button>
-</a>
-<br />
-<br />
+<div class="d-flex align-items-center pt-3 pb-5 my-3 text-white-50 bg-purple">
+{{#if category}}
+    <form class="row" action="/admin/categories/{{category.id}}?_method=PUT" method="POST">
+      {{#if category.parent.name}}
+      <div class="col-auto">
+        <select class="form-control" id="categoryId" name="categoryId">
+            {{#each mainCategories}}
+              <option value="{{this.id}}" {{#ifCond this.id ../category.parent.id}} selected {{/ifCond}}>
+                {{this.name}}
+              </option>
+            {{/each}}
+          </select>
+      </div>
+      <div class="col-auto">
+        <input class="form-control" type="text" placeholder="Sub Category Name" name="subName" value="{{category.name}}">
+      </div>
+      {{else}}
+      <div class="col-auto">
+          <select class="form-control" id="categoryId" name="categoryId">
+            {{#each mainCategories}}
+              <option value="{{this.id}}" {{#ifCond this.id ../category.id}} selected {{/ifCond}}>
+                {{this.name}}
+              </option>
+            {{/each}}
+          </select>
+      </div>
+      {{/if}}
+      <div class="col-auto">
+        <button class="btn btn-warning" type="submit">Update</button>
+        <a class="btn btn-link link-secondary text-decoration-none" href="/admin/categories">or Create New</a>
+      </div>
+    </form>
+  {{else}}
+    <form class="row" action="/admin/categories" method="POST">
+      <div class="col-auto">
+        <input class="form-control" type="text" placeholder="Category Name" name="name">
+      </div>
+      <div class="col-auto">
+        <input class="form-control" type="text" placeholder="Sub Category Name" name="subName">
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-success" type="submit">Create</button>
+      </div>
+    </form>
+  {{/if}}
+</div>
 <table class="table align-middle">
   <thead class="thead-dark">
     <tr>
@@ -15,20 +56,20 @@
   <tbody>
     {{#each categories}}
       <tr>
-        <td>{{this.name}}</td>
+        <td>
+          {{#if this.parent.name}}
+            {{this.parent.name}} ->
+          {{/if}}
+            {{this.name}}
+          </td>
         <td class="">
           <button type="button" class="btn btn-link">
             <a class="btn btn-link link-primary" href="/admin/categories/{{this.id}}">
-              Show
-            </a>
-          </button>
-          <button type="button" class="btn btn-link">
-            <a class="btn btn-link link-primary" href="/admin/categories/{{this.id}}/edit">
               Edit
             </a>
           </button>
           <form action="/admin/categories/{{this.id}}?_method=DELETE" method="POST" style="display: inline;" class="align-self-center">
-            <button type="submit" class="btn btn-link link-danger" onclick="return confirm(`確定要刪除 {{ this.name }} 嗎？`)">Delete</button>
+            <button type="submit" class="btn btn-link link-danger">Delete</button>
           </form>
         </td>
       </tr>
