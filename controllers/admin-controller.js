@@ -21,6 +21,38 @@ const adminController = {
       next(error)
     }
   },
+  getCreateProductPage: async (req, res, next) => {
+    try {
+      let categories = await Category.findAll({
+        include: {
+          model: Category,
+          as: 'parent',
+          required: false
+        },
+        order: [['id', 'ASC']]
+      })
+      categories = await categories.map(category => category.toJSON())
+      res.render('admin/create-product', { categories })
+    } catch (error) {
+      next(error)
+    }
+  },
+  createProduct: async (req, res, next) => {
+    try {
+      const { name, categoryId, inventory, price, spuSpec, skuDesc } = req.body
+      console.log(req.body)
+      if (!name || !categoryId || !inventory || !price || !spuSpec || !skuDesc) {
+        req.flash('warning_msg', 'All fields need to be filled')
+        return res.redirect('back')
+      }
+      const sku = await SKU.create({ name, price, desc: skuDesc })
+      await Product.create({ name, categoryId, inventory, spuSpec, skuId: sku.id })
+      req.flash('success_msg', 'Product has created successfully.')
+      res.redirect('/admin/products')
+    } catch (error) {
+      next(error)
+    }
+  },
   getProduct: async (req, res, next) => {
     try {
       const productId = req.params.id

@@ -4,6 +4,8 @@ const adminController = require('../../controllers/admin-controller')
 const upload = require('../../middleware/multer')
 
 router.get('/products', adminController.getProductsPage)
+router.get('/products/create', adminController.getCreateProductPage)
+router.post('/products', upload.single('image'), adminController.createProduct)
 router.get('/products/:id', adminController.getProduct)
 router.get('/products/:id/edit', adminController.getProductEditPage)
 router.put('/products/:id', upload.single('image'), adminController.editProduct)
