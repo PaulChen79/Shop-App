@@ -1,0 +1,39 @@
+<div class="form-row mb-3">
+  <label class="form-label" for="name">Name</label>
+  <input class="form-control" type="text" name="name" id="name" placeholder="Enter name" required value="{{product.name}}">
+</div>
+<div class="form-row mb-3">
+  <label class="form-label" for="categoryId">Category</label>
+  <select class="form-control" id="categoryId" name="categoryId">
+    {{#each categories}}
+      <option value="{{this.id}}" {{#ifCond this.id ../product.categoryId}} selected {{/ifCond}}>
+        {{#if this.parent.name}}
+              [{{this.parent.name}}] ->
+            {{/if}}
+            [{{this.name}}]
+      </option>
+    {{/each}}
+  </select>
+</div>
+<div class="form-row mb-3">
+  <label class="form-label" for="inventory">Inventory</label>
+  <input class="form-control" type="number" name="inventory" id="inventory" placeholder="Enter inventory" value="{{product.inventory}}">
+</div>
+<div class="form-row mb-3">
+  <label class="form-label" for="price">Price</label>
+  <input class="form-control" type="number" name="price" id="price" placeholder="Enter price" value="{{product.SKU.price}}">
+</div>
+<div class="form-row mb-3">
+  <label class="form-label" for="spuSpec">Spu Spec</label>
+  <textarea class="form-control" id="spuSpec" name="spuSpec" rows="3">{{product.spuSpec}}</textarea>
+</div>
+<div class="form-row mb-3">
+  <label class="form-label" for="skuName">Sku Description</label>
+  <textarea class="form-control" id="skuName" name="skuName" rows="3">{{product.SKU.desc}}</textarea>
+</div>
+<div class="form-row mb-3">
+  <label class="form-label" for="image">Image</label>
+  <input class="form-control" type="file" class="form-control-file" id="image" name="image">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+<a class="btn btn-outline-secondary" href="javascript:history.back()">Back</a>

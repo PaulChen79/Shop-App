@@ -36,6 +36,7 @@ const adminController = {
           }
         }]
       })
+      if (!product) throw new Error('Product not exist.')
       return res.render('admin/product', { product })
     } catch (error) {
       next(error)
@@ -79,6 +80,29 @@ const adminController = {
       })
       req.flash('success_msg', 'Permission has been updated successfully')
       return res.redirect('/admin/users')
+    } catch (error) {
+      next(error)
+    }
+  },
+  getProductEditPage: async (req, res, next) => {
+    try {
+      const productId = req.params.id
+      const product = await Product.findByPk(productId, {
+        raw: true,
+        nest: true,
+        include: [SKU]
+      })
+      if (!product) throw new Error('Product not exist.')
+      let categories = await Category.findAll({
+        include: {
+          model: Category,
+          as: 'parent',
+          required: false
+        },
+        order: [['id', 'ASC']]
+      })
+      categories = await categories.map(category => category.toJSON())
+      return res.render('admin/edit-product', { product, categories })
     } catch (error) {
       next(error)
     }
