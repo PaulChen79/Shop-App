@@ -106,6 +106,28 @@ const adminController = {
     } catch (error) {
       next(error)
     }
+  },
+  editProduct: async (req, res, next) => {
+    try {
+      const productId = req.params.id
+      const { name, categoryId, inventory, price, spuSpec, skuDesc } = req.body
+      console.log(req.body)
+      if (!name || !categoryId || !inventory || !price || !spuSpec || !skuDesc) {
+        req.flash('warning_msg', 'All fields need to be filled')
+        return res.redirect('back')
+      }
+      const product = await Product.findByPk(productId, {
+        nest: true,
+        include: [SKU, Category]
+      })
+      const sku = await SKU.findByPk(product.skuId)
+      await product.update({ name, categoryId, inventory, spuSpec })
+      await sku.update({ price, skuDesc })
+      req.flash('success_msg', 'Product has updated successfully.')
+      res.redirect('/admin/products')
+    } catch (error) {
+      next(error)
+    }
   }
 }
 
