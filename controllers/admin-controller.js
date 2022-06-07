@@ -160,6 +160,18 @@ const adminController = {
     } catch (error) {
       next(error)
     }
+  },
+  deleteProduct: async (req, res, next) => {
+    try {
+      const productId = req.params.id
+      const product = await Product.findByPk(productId)
+      if (!product) throw new Error('Product not exist.')
+      await product.destroy()
+      req.flash('success_msg', 'Product has deleted successfully.')
+      res.redirect('/admin/products')
+    } catch (error) {
+      next(error)
+    }
   }
 }
 
