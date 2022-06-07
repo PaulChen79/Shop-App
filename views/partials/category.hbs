@@ -15,7 +15,7 @@
     <ul>
       {{#each categories}}
         <li>
-          <a href="category-page.html">
+          <a href="?categoryId={{this.id}}">
             {{this.name}}
             <span class="category-toggle-icon">
               <i class="fas fa-chevron-down"></i>
@@ -24,7 +24,7 @@
           <ul class="category-section-dropdown">
             {{#each this.subCategories}}
               <li>
-                <a href="category-sub-page.html">
+                <a href="?categoryId={{this.id}}">
                   {{this.name}}
                 </a>
               </li>

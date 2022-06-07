@@ -1,0 +1,40 @@
+{
+    "product" : [
+        {
+            "id" : "1",
+            "name" : "Sylhet",
+            "parentId" : "0",
+
+            "area" : [
+
+                {
+                    "id": 1,
+                    "name": "Lamabazar"
+                },
+                {
+                    "id": 2,
+                    "name": "Madina market"
+                }
+            ]
+        },
+        {
+            "id" : "2",
+            "name" : "Dhaka",
+            "parentId" : "0",
+
+            "area" : [
+
+                {
+                    "id": 1,
+                    "name": "Tejgoan"
+                },
+                {
+                    "id": 2,
+                    "name": "Madina market"
+                }
+            ]
+        }
+    
+      
+    ]
+}
